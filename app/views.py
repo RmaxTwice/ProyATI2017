@@ -26,7 +26,14 @@ def register():
 
 		if existing_user is None:
 			hashed = generate_password_hash(request.form['pass'])
-			users.insert({'username': request.form['username'], 'password': hashed, 'email': request.form['email']})
+
+			users.insert({'username': request.form['username'],\
+						  'password': hashed, \
+						  'email': request.form['email'], \
+						  'name': request.form['name'], \
+						  'lastname': request.form['lastname'], \
+						  'imgurl': 'avatar.gif'})
+
 			return redirect(url_for('home'))
 
 		return "<h1>That Username is already taken.</h1>"
@@ -43,12 +50,10 @@ def logmein():
 	users = mongo.db.users
 	user = users.find_one({"username": request.form['username']})
 
-	
-
 	if (not user) or (not check_password_hash(user['password'], request.form['pass'])):
 		return "<h1>Usuario o contraseña incorrecta!</h1>"
 	
-	act_user = User(user['username'],user['password'],user['email'])
+	act_user = User(user['username'],user['password'],user['email'],user['name'],user['lastname'],user['imgurl'])
 	login_user(act_user)
 
 	return redirect(url_for('index'))
@@ -60,11 +65,23 @@ def logout():
 	logout_user()
 	return redirect(url_for('home'))
 	
+@app.route('/perfil/<userid>')
+@login_required
+def perfil(userid):
+	user = mongo.db.users.find_one({"username":userid})        
+	if user == None:
+		return redirect(url_for('index'))
+	return render_template('perfil.html',user=user)
+
+
 @lm.user_loader
 def load_user(username):
 	users = mongo.db.users
 	u = users.find_one({"username": username})
 	if not u:
 		return None
-	return User(u['username'],u['password'],u['email'])
+	return User(u['username'],u['password'],u['email'],u['name'],u['lastname'],u['imgurl'])
+
+
+
 

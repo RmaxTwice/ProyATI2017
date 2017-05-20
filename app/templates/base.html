@@ -50,7 +50,7 @@
                     </form>
                     
                     <ul class="nav navbar-nav pull-right nav-menu-options">
-                        <li><img src="/static/img/avatar.gif" class="nav-avatar"></li>
+                        <li><img src="/static/img/{{ current_user.imgurl }}" class="nav-avatar"></li>
                         <li><h3 class="user-name">{{ current_user.username }}</h3></li>
                         <li class = "user-options-menu">
                             <div class="dropdown">
@@ -58,7 +58,7 @@
                                     <span class="glyphicon glyphicon-menu-down"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Mi Perfil <span class="glyphicon glyphicon-user"></span></a></li>
+                                    <li><a href="/perfil/{{ current_user.username }}">Mi Perfil <span class="glyphicon glyphicon-user"></span></a></li>
                                     <li><a href="#">Mis cursos  <span class="glyphicon glyphicon-th-list"></span></a></li>
                                     <li><a href="/logout">Cerrar Sesi&oacute;n <span class="glyphicon glyphicon-log-out"></span></a></li>
                                 </ul>

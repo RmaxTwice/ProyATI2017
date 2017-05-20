@@ -243,6 +243,18 @@ fieldset{
 
 /* --------------------- FIN Pagina de iniciar sesion y registrar cuenta --------------------- */
 
+/* --------------------- Ver mi perfil y Modificar mi perfil --------------------- */
+
+img.profile-img{
+    height: 200px;
+}
+
+
+
+
+
+/* --------------------- FIN Ver mi perfil y Modificar mi perfil --------------------- */
+
 /* --------------------- Seccion de Pie de pagina --------------------- */
 
 .footer-container{
