@@ -1,0 +1,41 @@
+
+
+
+@media (min-width: 1025px) and (max-width: 2500px) {
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px)  {
+    .nav-menu-options{
+        margin-right: 1%;
+        margin-top: 20px;
+    }
+    
+    ul.nav-menu-options li{
+        font-size: 16px;
+        margin-left: 10px;
+        text-transform: uppercase;
+        font-family: 'Gruppo', sans-serif;
+        font-weight: bold;
+    }
+    
+    .input-group{
+        width: 200px;
+    }
+
+
+}
+
+@media only screen and (max-width : 767px) {
+    .nav-menu-options{
+        margin-right: 3%;
+        margin-top: 1%;
+        width:  100%;
+    }
+
+    .input-group{
+         margin-left: 5%;
+        width: 400px;
+    }
+}

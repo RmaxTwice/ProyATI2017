@@ -1,0 +1,59 @@
+        {% extends "baseA.html" %}
+        {% block content %}
+        <!--   ---------------  Cuerpo de la pagina web   ---------------  -->
+        <h2 class="text-success text-center">Iniciar Sesi&oacute;n<br></h2>
+        <div class="container">
+            
+      
+            <div class="nav-relleno"></div>
+            <div class="row fb-btn">
+                <div class="col-md-6 col-md-offset-3">
+                    <a href="#" class="btn btn-block btn-primary btn-lg">Inicia sesi&oacute;n con Facebook <i class="fa fa-facebook-square" style="font-size:24px"></i></a>
+                </div>
+            </div>
+            <div class="row fb-btn">
+                <div class="col-md-6 col-md-offset-3">
+                    <a href="#" class="btn btn-info btn-block m-4 btn-lg">Inicia sesi&oacute;n con Twitter <i class="fa fa-twitter" style="font-size:24px"></i></a>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="lead text-center">Ó </p>
+                </div>
+            </div>
+
+            <div class="row login-form">
+                <div class="col-md-6 col-md-offset-3">
+                    <form action="/logmein" method="POST">
+                        <div class="form-group">
+                            <label>Nombre de Usuario</label>
+                            <input type="text" class="form-control" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="">Contraseña</label>
+                            <input type="password" class="form-control" name="pass" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <button href="" class="btn btn-danger btn-lg btn-block submit-btn">Volver</button>
+                            </div>
+                            
+                            <div class="col-md-5 col-md-offset-2">
+                                <button type="submit" class="btn btn-success btn-lg btn-block submit-btn">Ingresar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <a style="font-size:18px" href="#">Recuperar contraseña</a>
+                </div>
+            </div>
+            
+        </div>
+        <div class="nav-relleno"></div>
+        
+        {% endblock %}
