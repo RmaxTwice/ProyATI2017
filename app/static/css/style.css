@@ -79,7 +79,7 @@ li.user-options-menu{
 }
 
 li.user-options-menu ul{
-    left: -150px;
+    left: -165px;
     top: 50px;
 }
 
@@ -230,7 +230,7 @@ div.fb-btn{
 }
 
 div.login-form{
-    margin-bottom: 20px
+    margin-bottom: 20px;
 }
 
 button.submit-btn{
@@ -241,6 +241,10 @@ fieldset{
     margin-top: 20px;
 }
 
+div.user-repeat-warning{
+    display: none;
+}
+
 /* --------------------- FIN Pagina de iniciar sesion y registrar cuenta --------------------- */
 
 /* --------------------- Ver mi perfil y Modificar mi perfil --------------------- */
@@ -249,7 +253,9 @@ img.profile-img{
     height: 200px;
 }
 
-
+a.no-btn{
+    display: none;
+}
 
 
 

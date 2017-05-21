@@ -1,7 +1,18 @@
         {% extends "baseA.html" %}
         {% block content %}
         <h2 class="text-success text-center">Registrar Cuenta<br></h2>
+
         <div class="container main-container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="alert alert-danger {{ user_warning }} alert-dismissable">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>Error!</strong> Ese nombre de Usuario ya existe por favor elija otro.
+                    </div>
+                </div>
+            </div>
+
+
             
             <div class="row login-form">
                 <div class="col-md-6 col-md-offset-3">
@@ -16,6 +27,7 @@
                                 <label>Nombre de Usuario:</label>
                                 <input type="text" class="form-control" name="username" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label class="">Contraseña:</label>
                                 <input type="password" class="form-control" name="pass" required>

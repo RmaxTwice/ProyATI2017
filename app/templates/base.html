@@ -29,7 +29,7 @@
             <div class="container-fluid">
                 <!-- Logo Principal -->
                 <div class="navbar-header">
-                    <a class="navbar-brand page-logo" href="inicionolog.html"><img src="/static/img/logoPrincipal4.png"></a>
+                    <a class="navbar-brand page-logo" href="/"><img src="/static/img/logoPrincipal4.png"></a>
                     <button type="button" class="navbar-toggle mobile-menu" data-toggle="collapse" data-target=".navbar-collapse">
                         <img src="/static/img/menu-mobile.png">
                     </button>
@@ -50,7 +50,7 @@
                     </form>
                     
                     <ul class="nav navbar-nav pull-right nav-menu-options">
-                        <li><img src="/static/img/{{ current_user.imgurl }}" class="nav-avatar"></li>
+                        <li><img src="{{ current_user.imgurl }}" class="nav-avatar"></li>
                         <li><h3 class="user-name">{{ current_user.username }}</h3></li>
                         <li class = "user-options-menu">
                             <div class="dropdown">
